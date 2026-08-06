@@ -1,2 +1,8 @@
 # Deploy secrets - never commit
 .env.deploy
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+uv.lock

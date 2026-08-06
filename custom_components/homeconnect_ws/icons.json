@@ -10,6 +10,9 @@
             "switch_extra_dry_option": {
                 "default": "mdi:heat-wave"
             },
+            "switch_eco_dry_option": {
+                "default": "mdi:heat-wave"
+            },
             "switch_intensiv_zone": {
                 "default": "mdi:pot-steam"
             },

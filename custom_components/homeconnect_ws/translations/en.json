@@ -113,6 +113,9 @@
       "switch_zeolite_dry": {
         "name": "CrystalDry"
       },
+      "switch_eco_dry_option": {
+        "name": "EfficientDry"
+      },
       "switch_extra_dry": {
         "name": "Extra Dry"
       },

@@ -322,6 +322,12 @@ DISHCARE_ENTITY_DESCRIPTIONS: _EntityDescriptionsDefinitionsType = {
             entity_category=EntityCategory.CONFIG,
             entity_registry_enabled_default=False,
         ),
+        # Also referred to as "EfficientDry"
+        HCSwitchEntityDescription(
+            key="switch_eco_dry_option",
+            entity="Dishcare.Dishwasher.Option.EcoDry",
+            device_class=SwitchDeviceClass.SWITCH,
+        ),
         HCSwitchEntityDescription(
             key="switch_extra_dry",
             entity="Dishcare.Dishwasher.Setting.ExtraDry",

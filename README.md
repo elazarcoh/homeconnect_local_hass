@@ -431,6 +431,22 @@ This integration follows standard integration removal, no extra steps are requir
 2. Click the 3 dots in the top right of the entry
 3. Click the delete button
 
+## Local Development
+
+To deploy local changes to a running Home Assistant instance:
+
+1. Copy `.env.deploy.example` to `.env.deploy` and fill in your HA details:
+   - `HA_SSH_HOST` - an SSH config alias (e.g. add a `Host` entry to
+     `~/.ssh/config`) pointing at your HA box, with a key that has write
+     access (directly or via passwordless `sudo`) to `/config`.
+   - `HA_URL` - your HA instance's base URL.
+   - `HA_TOKEN` - a Long-Lived Access Token from an **administrator**
+     account (Profile page -> Security tab -> Long-lived access tokens).
+2. Run `./script/deploy.sh`. It syncs `custom_components/homeconnect_ws`
+   over SSH and restarts Home Assistant, waiting until it's back up.
+
+`.env.deploy` holds a real access token and is gitignored - never commit it.
+
 ## At a Glance
 
 [![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=homeconnect_ws)
